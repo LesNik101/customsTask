@@ -1,15 +1,15 @@
 <template>
-  <hello-world />
+  <DictionaryComponent />
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld"
+import DictionaryComponent from "@/components/DictionaryComponent.vue"
 
 export default {
   name: "HomeView",
 
   components: {
-    HelloWorld,
+    DictionaryComponent,
   },
 }
 </script>

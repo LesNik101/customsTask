@@ -3,7 +3,7 @@
     <NavBar />
 
     <v-main>
-      <div class="d-flex h-100">
+      <div class="d-flex fill">
         <SideBar />
         <router-view />
       </div>
@@ -13,7 +13,7 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue"
-import SideBar from "./components/SideBar.vue"
+import SideBar from "@/components/SideBar.vue"
 export default {
   name: "App",
   components: {
@@ -27,7 +27,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.h-100 {
+.fill {
   height: 100%;
+  width: 100%;
 }
 </style>

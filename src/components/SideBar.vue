@@ -2,12 +2,16 @@
   <v-card elevation="9" class="sidebar">
     <v-navigation-drawer permanent width="337">
       <v-list>
-        <v-list-group value="true" v-for="itemGroup in config" :key="itemGroup">
+        <v-list-group
+          value="true"
+          v-for="itemGroup in config"
+          :key="itemGroup.title"
+        >
           <template v-slot:activator>
             <v-list-item-title>{{ itemGroup.title }}</v-list-item-title>
           </template>
 
-          <v-list-item v-for="item in itemGroup.items" :key="item" link>
+          <v-list-item v-for="item in itemGroup.items" :key="item.title" link>
             <v-list-item-icon>
               <v-icon size="13">$vuetify.icons.{{ item.icon }}</v-icon>
             </v-list-item-icon>
@@ -42,5 +46,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.v-list-item.v-list-item--link.theme--light {
+  height: 50px;
 }
 </style>
